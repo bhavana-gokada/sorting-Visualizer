@@ -1,0 +1,14 @@
+.h1{
+    color:white;
+    text-align: center;
+}
+
+@keyframes swap{
+    from{background-color: white;}
+    to{background-color: yellow;}
+}
+
+@keyframes swapback{
+    from{background-color:yellow;}
+    to{background-color:white;}
+}
