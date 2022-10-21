@@ -1,0 +1,32 @@
+import swap from "./swap.js"
+// const s= require("./swap.js")
+function resolveAfter2Seconds(speed) {
+    return new Promise(resolve => {
+      setTimeout(() =>resolve(), speed);//delay(3)
+    });
+}
+export default async function insertionSort(){
+    let com=document.getElementById("timeComplexity");
+    com.style.color="white"
+    com.innerHTML=""
+
+    var sorting=document.getElementById("sortingname");
+    sorting.innerHTML='<h3><center>Insertion Sort<center></h3>'
+    sorting.style.color="orange"
+    var speed = document.getElementById("speed").value;
+    var divno=document.getElementById("bar")
+    const n=divno.getElementsByTagName('*').length;
+    var i,j
+    let a1="e"+0
+    let ini=document.getElementById(a1)
+    ini.style.backgroundColor="green"
+    for (i = 1; i < n; i++) {  
+        let id="e"+i
+        let ele = document.getElementById(id)
+        ele.style.backgroundColor="yellow"
+        j = i - 1;
+        let tmpid="e"+j
+        let temp = document.getElementById(tmpid)
+        temp.style.backgroundColor="yellow"
+    }  
+}  

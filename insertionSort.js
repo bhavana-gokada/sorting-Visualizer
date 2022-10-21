@@ -1,5 +1,4 @@
 import swap from "./swap.js"
-// const s= require("./swap.js")
 function resolveAfter2Seconds(speed) {
     return new Promise(resolve => {
       setTimeout(() =>resolve(), speed);//delay(3)
@@ -9,50 +8,51 @@ export default async function insertionSort(){
     let com=document.getElementById("timeComplexity");
     com.style.color="white"
     com.innerHTML=""
-
     var sorting=document.getElementById("sortingname");
     sorting.innerHTML='<h3><center>Insertion Sort<center></h3>'
     sorting.style.color="orange"
     var speed = document.getElementById("speed").value;
     var divno=document.getElementById("bar")
     const n=divno.getElementsByTagName('*').length;
+    // console.log("length of bars",n)
     // console.log(n);
     var i,j
-    let a1="e"+0
-    let ini=document.getElementById(a1)
-    // console.log(ini)
-    ini.style.backgroundColor="green"
-    for (i = 1; i < n; i++) {  
-        let id="e"+i
-        let first = document.getElementById(id)
-        // console.log("first: ",first)
-        first.style.backgroundColor="yellow"
-        j = i - 1;
-        let tmpid="e"+j
-        let temp = document.getElementById(tmpid)
-        temp.style.backgroundColor="yellow"
-        while(j>=0 && parseInt(first.innerHTML)<= parseInt(temp.innerHTML))  /* Move the elements greater than temp to one position ahead from their current position*/  
-        {    
-            let id2="e"+(j+1)
-            let ele2 = document.getElementById(id2)
-            ele2.style.backgroundcolor="yellow"
-            swap(j+1,j)  
+    // let x=document.createElement("div");
+    // x.innerText="Selection sort"
+    // x.style.color="white"
+    // document.getElementById("bar").appendChild(x);
+    for (i = 0; i < n-1; i++)
+    {
+        let id="e"+i;
+        let x=document.getElementById(id)
+        let min_idx=i;
+        x.style.backgroundColor="yellow"
+        for (j = i + 1; j < n; j++){
+            let tempid="e"+j
+            let tempele=document.getElementById(tempid);
+            tempele.style.backgroundColor="yellow"
             await resolveAfter2Seconds(speed)
-            ele2.style.backgroundColor="white"
-            j = j-1;
-            if(j>-1){
-                let tmpid="e"+j
-                let temp = document.getElementById(tmpid)
-                temp.style.backgroundColor="yellow"
+            let temp="e"+min_idx
+            let tmp=document.getElementById(temp)
+            console.log(parseInt(tempele.innerHTML),parseInt(tmp.innerHTML))
+            if(parseInt(tempele.innerHTML)<parseInt(tmp.innerHTML)){
+                if(min_idx!=i)    
+                    tmp.style.backgroundColor="white";
+                min_idx=j
+                tempele.style.backgroundColor="red"
+                // console.log(x.style.height,y.style.height)
             }
-            console.log("j greater than 0",j>=0)
-            console.log("numbers checking",parseInt(first.innerHTML)<= parseInt(temp.innerHTML))
-            console.log("first",parseInt(first.innerHTML))
-            console.log("temp",parseInt(temp.innerHTML))
+            else{
+                tempele.style.backgroundColor="white"
+            }
+            await resolveAfter2Seconds(speed)
         }
-        tmpid="e"+(i-1)
-        temp = document.getElementById(tmpid)
-        temp.style.backgroundColor="green"
-        first.style.backgroundColor="green"
-    }  
-}  
+        swap(min_idx,i);
+        await resolveAfter2Seconds(speed)
+        let id2="e"+min_idx            
+        let y=document.getElementById(id2)
+        y.style.backgroundColor="white"
+        x.style.backgroundColor="white"
+    }
+    com.innerHTML=`<center><h5>Time Complexity :  O(n2)</h5></center>`
+}

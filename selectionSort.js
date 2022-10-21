@@ -55,4 +55,5 @@ export default async function selectionSort(){
         y.style.backgroundColor="white"
         x.style.backgroundColor="white"
     }
+    com.innerHTML=`<center><h5>Time Complexity :  O(n2)</h5></center>`
 }

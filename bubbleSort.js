@@ -15,12 +15,7 @@ export default async function bubbleSort(){
     var speed = document.getElementById("speed").value;
     var divno=document.getElementById("bar")
     const n=divno.getElementsByTagName('*').length;
-    // console.log(n);
     var i,j
-    // let x=document.createElement("div");
-    // x.innerText="Selection sort"
-    // x.style.color="white"
-    // document.getElementById("bar").appendChild(x);
     for (i = 0; i <n; i++)
     {
         for (j = 0; j < n-i-1; j++)
