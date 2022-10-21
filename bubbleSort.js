@@ -12,6 +12,24 @@ export default async function bubbleSort(){
     var sorting=document.getElementById("sortingname");
     sorting.innerHTML='<h3><center>Bubble Sort<center></h3>'
     sorting.style.color="orange"
+
+    var scale=document.getElementById("scale");
+    document.getElementById("scale").innerHTML="";
+    const p = document.createElement("p");
+    const p2 = document.createElement("p");
+    p.style.backgroundColor="yellow"
+    p.style.margin="8px"
+    p.style.padding="1px"
+    p.style.height="10px";
+    p.style.width="10px";
+    p2.innerHTML=`Elements compared`
+    p2.style.color="white"
+    scale.appendChild(p);
+    scale.appendChild(p2);
+    scale.style.display="flex"
+    scale.style.justifyContent="center"
+    
+
     var speed = document.getElementById("speed").value;
     var divno=document.getElementById("bar")
     const n=divno.getElementsByTagName('*').length;

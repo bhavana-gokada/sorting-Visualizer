@@ -15,13 +15,36 @@ export default async function selectionSort(){
     var speed = document.getElementById("speed").value;
     var divno=document.getElementById("bar")
     const n=divno.getElementsByTagName('*').length;
-    // console.log("length of bars",n)
-    // console.log(n);
+    
+    var scale=document.getElementById("scale");
+    document.getElementById("scale").innerHTML="";
+    const p = document.createElement("p");
+    const p2 = document.createElement("p");
+    const p3 = document.createElement("p");
+    const p4 = document.createElement("p");
+    p3.style.backgroundColor="yellow"
+    p3.style.margin="8px"
+    p3.style.padding="1px"
+    p3.style.height="10px";
+    p3.style.width="10px";
+    p.style.backgroundColor="red"
+    p.style.margin="8px"
+    p.style.padding="1px"
+    p.style.height="10px";
+    p.style.width="10px";
+    p2.innerHTML=`Elements compared`
+    p2.style.color="white"
+    p4.innerHTML=`Minimum element`
+    p4.style.color="white"
+    scale.appendChild(p);
+    scale.appendChild(p4);
+    scale.appendChild(p3);
+    scale.appendChild(p2);
+    scale.style.display="flex"
+    scale.style.justifyContent="center"
+
+
     var i,j
-    // let x=document.createElement("div");
-    // x.innerText="Selection sort"
-    // x.style.color="white"
-    // document.getElementById("bar").appendChild(x);
     for (i = 0; i < n-1; i++)
     {
         let id="e"+i;

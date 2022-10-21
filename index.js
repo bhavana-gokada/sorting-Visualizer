@@ -15,6 +15,7 @@ async function AcceptArray(){
     const n=divno.getElementsByTagName('*').length;
     document.getElementById("timeComplexity").innerHTML=""
     document.getElementById("bar").innerHTML="";
+    document.getElementById("scale").innerHTML="";
     const arr=new Array(document.getElementById("array").value)
     console.log("arr",arr.length)
     if((arr.length===1)&&(arr[0]==='')){
@@ -33,7 +34,7 @@ async function AcceptArray(){
         });
     }
     catch(err){
-        alert("please enter only numericals");
+        alert("please enter only numericals seperated with comma");
         return;
     }
     document.getElementById("sortingname").innerHTML='<h3><center>Array Representation</center></h3>';

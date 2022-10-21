@@ -12,6 +12,46 @@ export default async function quickSort(){
     var sorting=document.getElementById("sortingname");
     sorting.innerHTML='<h3><center>Quick Sort<center></h3>'
     sorting.style.color="orange"
+
+    var scale=document.getElementById("scale");
+    document.getElementById("scale").innerHTML="";
+    const p = document.createElement("p");
+    const p2 = document.createElement("p");
+    const p3 = document.createElement("p");
+    const p4 = document.createElement("p");
+    const p5 = document.createElement("p");
+    const p6 = document.createElement("p");
+    p3.style.backgroundColor="yellow"
+    p3.style.margin="8px"
+    p3.style.padding="1px"
+    p3.style.height="10px";
+    p3.style.width="10px";
+    p.style.backgroundColor="red"
+    p.style.margin="8px"
+    p.style.padding="1px"
+    p.style.height="10px";
+    p.style.width="10px";
+    p5.style.backgroundColor="green"
+    p5.style.margin="8px"
+    p5.style.padding="1px"
+    p5.style.height="10px";
+    p5.style.width="10px";
+    p2.innerHTML=`Left Pointer`
+    p2.style.color="white"
+    p4.innerHTML=`Pivot Element`
+    p4.style.color="white"
+    p6.innerHTML=`Right pointer`
+    p6.style.color="white"
+    scale.appendChild(p);
+    scale.appendChild(p4);
+    scale.appendChild(p3);
+    scale.appendChild(p2);
+    scale.appendChild(p5);
+    scale.appendChild(p6);
+    scale.style.display="flex"
+    scale.style.justifyContent="center"
+
+
     var divno=document.getElementById("bar")
     let right=divno.getElementsByTagName('*').length
     quicksort(0,right-1)
@@ -77,7 +117,7 @@ async function quicksort(left, right) {
                 console.log("pivot",p.innerHTML)
                 console.log("left",left)
         }
-        l.style.backgroundColor="lightblue"
+        l.style.backgroundColor="white"
         console.log('left',left)
         console.log('right',right)
         console.log('pivot',pivot)
