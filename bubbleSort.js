@@ -44,10 +44,6 @@ export default async function bubbleSort(){
             let y=document.getElementById(id2)
             x.style.backgroundColor="yellow"
             y.style.backgroundColor="yellow"
-            // x.style.animationDuration="0.5s"
-            // y.style.animationDuration="0.5s"
-            // console.log(x.style.height,y.style.height)
-            // if (x.style.height>y.style.height)
             if(parseFloat(x.innerHTML)> parseFloat(y.innerHTML))
             {
                 swap(j,j+1);

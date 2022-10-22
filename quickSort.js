@@ -21,11 +21,18 @@ export default async function quickSort(){
     const p4 = document.createElement("p");
     const p5 = document.createElement("p");
     const p6 = document.createElement("p");
+    const p7 = document.createElement("p");
+    const p8 = document.createElement("p");
     p3.style.backgroundColor="yellow"
     p3.style.margin="8px"
     p3.style.padding="1px"
     p3.style.height="10px";
     p3.style.width="10px";
+    p7.style.backgroundColor="lightblue"
+    p7.style.margin="8px"
+    p7.style.padding="1px"
+    p7.style.height="10px";
+    p7.style.width="10px";
     p.style.backgroundColor="red"
     p.style.margin="8px"
     p.style.padding="1px"
@@ -42,12 +49,16 @@ export default async function quickSort(){
     p4.style.color="white"
     p6.innerHTML=`Right pointer`
     p6.style.color="white"
+    p8.innerHTML=`pivot element is placed in its position`
+    p8.style.color="white"
     scale.appendChild(p);
     scale.appendChild(p4);
     scale.appendChild(p3);
     scale.appendChild(p2);
     scale.appendChild(p5);
     scale.appendChild(p6);
+    scale.appendChild(p7);
+    scale.appendChild(p8);
     scale.style.display="flex"
     scale.style.justifyContent="center"
 
@@ -117,7 +128,7 @@ async function quicksort(left, right) {
                 console.log("pivot",p.innerHTML)
                 console.log("left",left)
         }
-        l.style.backgroundColor="white"
+        l.style.backgroundColor="lightblue"
         console.log('left',left)
         console.log('right',right)
         console.log('pivot',pivot)
