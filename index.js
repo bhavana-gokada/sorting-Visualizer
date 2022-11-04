@@ -2,11 +2,12 @@ import bubbleSort from "./bubbleSort.js"
 import selectionSort from "./selectionSort.js"
 import insertionSort from "./insertionSort.js"
 import quickSort from "./quickSort.js"
-const sub=document.getElementById("submit")
+
 const bubble=document.getElementById("bubble")
 const insertion=document.getElementById("insertion")
 const quick=document.getElementById("quick")
 const selection=document.getElementById("selection")
+const sub=document.getElementById("submit")
 sub.addEventListener("click",AcceptArray)
 
 // let arr,speed,
@@ -49,7 +50,7 @@ async function AcceptArray(){
         p.style.padding="1px"
         p.style.fontSize="0.85em"
         x=10+arrOfNum[a]*3;
-        p.style.height=x+"px"
+        p.style.height=x*2+"px"
         p.setAttribute('id','e'+a)
         document.getElementById("bar").appendChild(p);
     }

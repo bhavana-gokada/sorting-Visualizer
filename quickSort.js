@@ -138,5 +138,5 @@ async function quicksort(left, right) {
     let com=document.getElementById("timeComplexity");
     com.style.color="white"
     com.innerHTML=""
-    com.innerHTML=`<center><h5>Time Complexity :  O(nlog(n))</h5></center>`
+    com.innerHTML=`<center><h5>Best Time Complexity :  O(n log n)<br>Average Time Complexity :  O(n^2)<br>worst Time Complexity :  O(n^2)<br></h5></center>`
 }

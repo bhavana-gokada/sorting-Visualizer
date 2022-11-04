@@ -56,5 +56,5 @@ export default async function bubbleSort(){
       
     }
     
-    com.innerHTML=`<center><h5>Time Complexity :  O(n2)</h5></center>`
+    com.innerHTML=`<center><h5>Best Time Complexity :  O(n)<br>Average Time Complexity :  O(n^2)<br>worst Time Complexity :  O(n^2)<br></h5></center>`
 }

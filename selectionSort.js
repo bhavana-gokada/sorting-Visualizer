@@ -78,5 +78,5 @@ export default async function selectionSort(){
         y.style.backgroundColor="white"
         x.style.backgroundColor="white"
     }
-    com.innerHTML=`<center><h5>Time Complexity :  O(n2)</h5></center>`
+    com.innerHTML=`<center><h5>Best Time Complexity :  O(n^2)<br>Average Time Complexity :  O(n^2)<br>worst Time Complexity :  O(n^2)<br></h5></center>`
 }

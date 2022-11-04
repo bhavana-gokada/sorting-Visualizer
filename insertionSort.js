@@ -61,7 +61,7 @@ export default async function insertionSort(){
         console.log("yellow2")
         temp.style.backgroundColor="green"
         await resolveAfter2Seconds(speed)
-        while(j>=0 && parseInt(ele.innerHTML)<= parseInt(temp.innerHTML)){
+        while(j>=0 && parseFloat(ele.innerHTML)<= parseFloat(temp.innerHTML)){
             console.log("in while loop")
             console.log("j>=0",j>=0)
             console.log("ele.innerHTML",ele.innerHTML)
@@ -83,5 +83,6 @@ export default async function insertionSort(){
             }
         }
         i=acti
-    }  
+    }
+    com.innerHTML=`<center><h5>Best Time Complexity :  O(n)<br>Average Time Complexity :  O(n^2)<br>worst Time Complexity :  O(n^2)<br></h5></center>`  
 }
